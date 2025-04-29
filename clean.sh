@@ -1,12 +1,8 @@
 #!/bin/bash
 set -eu
 
-echo "Clearing executables..."
+echo "Clearing executable..."
 
-rm p0
-rm p1
-rm p2
-rm p3
-rm p4
+rm bankers
 
 echo "Finished"

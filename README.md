@@ -11,14 +11,14 @@ Assignment 2
 Submission for Assignment 2 of Dr. Qiang Guan's CS 33211 Operating Systems course.
 Intended as an implementation of Banker's Algorithm.
 
-## General Overview and Requirements
-
-The program was designed to be run in a Linux environment.
+The program was designed to be run in a Linux environment. The intended compiler is gcc.
 
 ## Project Layout
 
 The src folder contains all the source code.
-- bankers.hpp
+- resource.hpp
+- resource.cpp
+- bankers.cpp
 - p0.cpp
 - p1.cpp
 - p2.cpp
@@ -32,4 +32,15 @@ Currently contains:
 
 ## Compilation Instructions
 
-(compilation and running instructions)
+The process can be compiled and ran by using the build.sh file.
+Simply type in ./build.sh
+
+It is also possible to type the commands out manually:
+- gcc ./src/resource.cpp ./src/bankers.cpp -Wall -o bankers
+- gcc ./src/resource.cpp ./src/p0.cpp -Wall -o p0
+- gcc ./src/resource.cpp ./src/p1.cpp -Wall -o p1
+- gcc ./src/resource.cpp ./src/p2.cpp -Wall -o p2
+- gcc ./src/resource.cpp ./src/p3.cpp -Wall -o p3
+- gcc ./src/resource.cpp ./src/p4.cpp -Wall -o p4
+
+- ./bankers data/test_resources.csv data/test_process.csv

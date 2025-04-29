@@ -1,0 +1,16 @@
+Process,Resource Type,Max,Allocation
+p0,A,7,0
+p0,B,5,1
+p0,C,3,0
+p1,A,3,2
+p1,B,2,0
+p1,C,2,0
+p2,A,9,3
+p2,B,0,0
+p2,C,2,2
+p3,A,2,2
+p3,B,2,1
+p3,C,2,1
+p4,A,4,0
+p4,B,3,0
+p4,C,3,2

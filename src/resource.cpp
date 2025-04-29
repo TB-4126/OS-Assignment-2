@@ -15,4 +15,3 @@ void resourceTable::resize(int process, int resource) {
    max = new int[i * j];
    allocation = new int[i * j];
 }
-

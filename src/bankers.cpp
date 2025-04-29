@@ -35,18 +35,45 @@ int main(int argc, char* argv[]) {
    //Stores the data from the file into the static arrays
 
 
-   resourceTable* sharedTable;
+
+   resourceTable* sharedTable; //Creates a table the size needed to store the data
    sharedTable = new resourceTable(processQuantity,resourceQuantity);
 
-   //inputs the data
-   sharedTable->max[(0 + sharedTable->i) * (1 + sharedTable->j)] = 5;
+   //
+   //Inputs the data into the shared table
+   //
+   //Available Array
+   for (int m = 0; m < sharedTable->j; ++m) { sharedTable->available[m] = fileAvailable[m]; }
 
-   std::cout << "The value of p0 B is: " << sharedTable->max[0 * (1 + 3)] << std::endl;
+   //Max Array
+   for (int n = 0; n < sharedTable->i; ++n) {
+      for (int m = 0; m < sharedTable->j; ++m) {
+         sharedTable->max[(n + sharedTable->i) * (m + sharedTable->j)] = *(fileMax[(n + sharedTable->i) * (m + sharedTable->j)]);
+      }
+   }
 
+   //Allocation Array
+   for (int n = 0; n < sharedTable->i; ++n) {
+      for (int m = 0; m < sharedTable->j; ++m) {
+         sharedTable->allocation[(n + sharedTable->i) * (m + sharedTable->j)] = *(fileAllocation[(n + sharedTable->i) * (m + sharedTable->j)]);
+      }
+   }
 
+   //
+   //Safety State Algorithm
+   //
+
+   //in a safe sequence?
+   bool safe = false;
+
+   //what is the safe sequence?
+   char safeSequence[processQuantity];
+
+   //outputs wheather it is safe or not
+   if (safe != 0) { std::cout << "The system's safe sequence is: " << safeSequence << std::endl; }
+   else { std::cout << "The system is not safe" << std::endl; }
 
    //Closes the files
    inFileResource.close();
    inFileProcess.close();
-
 }

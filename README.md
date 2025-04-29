@@ -19,16 +19,12 @@ The src folder contains all the source code.
 - resource.hpp
 - resource.cpp
 - bankers.cpp
-- p0.cpp
-- p1.cpp
-- p2.cpp
-- p3.cpp
-- p4.cpp
 
 The data folder is where any files containing data should be placed.
 Must be entered as a CSV file format.
 Currently contains:
-- test_data.csv to act as the assigned example
+- test_process.csv  : containing the data of which resources a process is requesting
+- test_resource.csv : containing the data of which resources are available
 
 ## Compilation Instructions
 
@@ -37,10 +33,4 @@ Simply type in ./build.sh
 
 It is also possible to type the commands out manually:
 - gcc ./src/resource.cpp ./src/bankers.cpp -Wall -o bankers
-- gcc ./src/resource.cpp ./src/p0.cpp -Wall -o p0
-- gcc ./src/resource.cpp ./src/p1.cpp -Wall -o p1
-- gcc ./src/resource.cpp ./src/p2.cpp -Wall -o p2
-- gcc ./src/resource.cpp ./src/p3.cpp -Wall -o p3
-- gcc ./src/resource.cpp ./src/p4.cpp -Wall -o p4
-
 - ./bankers data/test_resources.csv data/test_process.csv

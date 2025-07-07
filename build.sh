@@ -8,7 +8,7 @@ set -eu
 #Compilation
 echo "Compiling Process..."
 
-gcc ./src/resource.cpp ./src/bankers.cpp -Wall -o bankers
+gcc ./src/bankers.cpp -Wall -o bankers
 
 #Running the Executables
 
